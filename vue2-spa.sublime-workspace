@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"last_filter": "qc",
+		"selected_items":
+		[
+			[
+				"qc",
+				"Git: Quick Commit"
+			],
+			[
+				"qa",
+				"Git: Quick Add"
+			],
+			[
+				"git qa",
+				"Git: Quick Add"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/zhaolu/Work/frontend/vue2.0-spa-demo",
+		"/Users/zhaolu/Work/frontend/vue2.0-spa-demo/my-spa"
+	],
+	"file_history":
+	[
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/.babelrc",
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/learning-project/src/App.vue",
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/learning-project/src/components/List.vue",
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/vue-virtual-list/src/App.vue",
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/vue-virtual-list/index.html",
+		"/Users/zhaolu/Work/frontend/Vue-VirtualList-Demo/vue-virtual-list/src/main.js",
+		"/Users/zhaolu/Downloads/cocos2d-js-v3.12-lite/HelloWorld.html",
+		"/Users/zhaolu/Work/frontend/vue-project/package.json",
+		"/Users/zhaolu/Work/frontend/vue-project/src/components/list.vue",
+		"/Users/zhaolu/Work/frontend/vue-project/src/components/Vlist.vue",
+		"/Users/zhaolu/Work/frontend/vue-project/src/components/VList.vue",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/lazy-loading/Bar.vue",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/transitions/index.html",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/mytest/app.js",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/named-routes/app.js",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/named-views/app.js",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/mytest/index.html",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/transition.css",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/lazy-loading/app.js",
+		"/Users/zhaolu/Work/frontend/vue-devtools/src/devtools/components/App.vue",
+		"/Users/zhaolu/Work/frontend/zhihu-daily-byVuejs/server/app.js",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/scroll-behavior/app.js",
+		"/Users/zhaolu/Work/frontend/vue-router/dist/vue-router.js",
+		"/Users/zhaolu/Work/frontend/vue-router/dist/untitled",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/basic/index.html",
+		"/Users/zhaolu/Work/frontend/vue-router/examples/index.html",
+		"/Users/zhaolu/Work/frontend/vue-router/test/e2e/specs/scroll-behavior.js",
+		"/Users/zhaolu/Work/frontend/vue-project/node_modules/eslint-config-standard/eslintrc.json",
+		"/Users/zhaolu/Work/frontend/vue-project/router.html",
+		"/Users/zhaolu/Work/frontend/vue-project/node_modules/vue/dist/vue.js",
+		"/Users/zhaolu/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/zhaolu/Work/frontend/vue-project/.eslintrc.js",
+		"/Users/zhaolu/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/zhaolu/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/zhaolu/Work/frontend/vue-project/src/components/Hello.vue",
+		"/Users/zhaolu/Work/frontend/vue-project/src/components/Test.vue",
+		"/Users/zhaolu/Work/frontend/vue-project/src/App.vue"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"getItems",
+			"jquery",
+			"_createTypicalItem",
+			".$data",
+			"this.items",
+			"no-var",
+			"jquery",
+			"slide",
+			"App",
+			"contents",
+			"8080",
+			"index",
+			"addeventlistener",
+			"history",
+			"scrollbehavior",
+			"scrollBehavior",
+			"beforeEnter",
+			"'}\">",
+			"base",
+			"__dirname",
+			"__build__",
+			"Home",
+			"scrollBehavior",
+			"strats",
+			"optionMergeStrategies",
+			"console",
+			"no-multi-spaces",
+			"eslint",
+			"hello",
+			"devtools"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "vue2-spa.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"list.vue",
+				"vue-project/src/components/List.vue"
+			],
+			[
+				".vue",
+				"vue-devtools/src/devtools/components/App.vue"
+			],
+			[
+				"",
+				"zhihu-daily-byVuejs/zhihu-daily-vue/node_modules/.bin/webpack-dev-server"
+			],
+			[
+				"webpackdevser",
+				"zhihu-daily-byVuejs/zhihu-daily-vue/node_modules/.bin/webpack-dev-server"
+			],
+			[
+				"vuerout",
+				"vue-router/dist/vue-router.js"
+			],
+			[
+				"vuerouter",
+				"vue-router/dist/vue-router.js"
+			],
+			[
+				"vuer",
+				"vue-router/dist/vue-router.js"
+			],
+			[
+				"vueroute",
+				"vue-router/dist/vue-router.js"
+			],
+			[
+				"named-route",
+				"vue-router/examples/named-routes/app.js"
+			],
+			[
+				"scrollbeah",
+				"vue-router/examples/scroll-behavior/index.html"
+			],
+			[
+				"scrollbehavior.js",
+				"vue-router/test/e2e/specs/scroll-behavior.js"
+			],
+			[
+				"eslin",
+				"node_modules/eslint-config-standard/eslintrc.json"
+			],
+			[
+				"vue.js",
+				"node_modules/vue/dist/vue.js"
+			],
+			[
+				"hello",
+				"src/components/Hello.vue"
+			],
+			[
+				"testvue",
+				"src/components/Test.vue"
+			],
+			[
+				"appvue",
+				"src/App.vue"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
