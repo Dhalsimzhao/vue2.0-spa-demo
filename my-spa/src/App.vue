@@ -1,86 +1,88 @@
 <template>
-  <div id="123">
-    <h1>Vue Router & Vue Resource Tiny Demo</h1>
-    <!-- <h1>{{ msg }}</h1> -->
-    <ul>
-      <li><router-link to="/datas">数据列表</router-link></li>
-      <li><router-link to="/data/:id">单数据页</router-link></li>
-    </ul>
-    <router-view class="view"></router-view>
+  <div id="app">
+    <div class="top-view">
+      <top></top>
+    </div>
+    <div class="left-view">
+      <left></left>
+    </div>
+    <div class="center-view">
+      <center></center>
+    </div>
+    <div class="right-view">
+      <right></right>
+    </div>
+    <div class="bottom-view">
+      <bottom></bottom>
+    </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import DatasComp from './components/DatasComp'
-import DataComp from './components/DataComp'
+import Top from './components/applayouts/AppTop.vue'
+import Left from './components/applayouts/AppLeft.vue'
+import Center from './components/applayouts/AppCenter.vue'
+import Right from './components/applayouts/AppRight.vue'
+import Bottom from './components/applayouts/AppBottom.vue'
 
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-  mode: 'history',
-  base: __dirname,
-  routes: [
-    {
-      path: '/datas',
-      components: DatasComp
-    },
-    {
-      path: '/data/:id',
-      components: DataComp
-    }
-  ]
-});
-
-// module.exports = {
-//   router: router,
-//   data() {
-//     return {
-//       msg: ''
-//     }
-//   }
-// }
-
-var App = new Vue({
-  data() {
-    return {
-      msg: ''
-    }
+export default {
+  components: {
+    Top, Left, Right, Center, Bottom
   }
-});
-
-module.exports = App;
+}
 
 </script>
 
-<style>
-html {
-  height: 100%;
+<style scoped lang="less">
+@color: #eee;
+html, body {
+  margin: 0;
+  padding: 0;
 }
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.abs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
-#app {
-  color: #2c3e50;
-  margin-top: -100px;
-  max-width: 600px;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
-  text-align: center;
+.top-view {
+  position: absolute;
+  border-bottom: 1px solid @color;
+  height: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-
-#app a {
-  color: #42b983;
-  text-decoration: none;
+.left-view {
+  position: absolute;
+  border-right: 1px solid @color;
+  top: 40px;
+  bottom: 40px;
+  width: 160px;
+  left: 0;
 }
-
-.logo {
-  width: 100px;
-  height: 100px
+.right-view {
+  position: absolute;
+  border-left: 1px solid @color;
+  right: 0;
+  top: 40px;
+  bottom: 40px;
+  width: 160px;
+}
+.center-view {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 160px;
+  right: 160px;
+}
+.bottom-view {
+  position: absolute;
+  border-top: 1px solid @color;
+  bottom: 0;
+  height: 40px;
+  left: 0;
+  right: 0;
 }
 </style>
