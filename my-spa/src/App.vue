@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
 import Top from './components/applayouts/AppTop.vue'
 import Left from './components/applayouts/AppLeft.vue'
 import Center from './components/applayouts/AppCenter.vue'

@@ -12,25 +12,25 @@
 
 // const routes = [
 //   {
-//     path: '/r1', 
+//     path: '/foo', 
 //     component: { template: '<div>router 1 cp</div>'},
 //     name: 'r1'
-//   },
-//   {
-//     path: '/r2', 
-//     component: { template: '<div>router 2 cp</div>'},
-//     name: 'r2'
 //   }
 // ];
+// const Foo = { template: '<div>foo</div>' }
+
+// const routes = [
+//   { path: '/foo', component: Foo }
+// ]
 
 // const router = new VueRouter({
-//   mode: 'hash',
+//   // mode: 'hash',
 //   routes
 // });
 
-// export default {
+// var left = new Vue({
 //   router
-// }
+// });
 
 export default {
   
