@@ -1,10 +1,10 @@
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'main',
     component(resolve) {
-      require.ensure(['./views/index.vue'], () => {
-          resolve(require('./views/index.vue'));
+      require.ensure(['./views/main.vue'], () => {
+        resolve(require('./views/main.vue'));
       });
     }
   },
@@ -12,8 +12,8 @@ const routes = [
     path: '/datas',
     name: 'datas',
     component(resolve) {
-      require.ensure(['./views/index.vue'], () => {
-          resolve(require('./views/index.vue'));
+      require.ensure(['./views/datas.vue'], () => {
+        resolve(require('./views/datas.vue'));
       });
     }
   },
@@ -21,8 +21,35 @@ const routes = [
     path: '/charts',
     name: 'charts',
     component(resolve) {
-      require.ensure(['./views/message.vue'], () => {
-        resolve(require('./views/message.vue'));
+      require.ensure(['./views/charts.vue'], () => {
+        resolve(require('./views/charts.vue'));
+      });
+    }
+  },
+  {
+    path: '/data/:id',
+    name: 'data',
+    component(resolve) {
+      require.ensure(['./views/data.vue'], () => {
+        resolve(require('./views/data.vue'));
+      });
+    }
+  },
+  {
+    path: '/articles',
+    name: 'articles',
+    component(resolve) {
+      require.ensure(['./views/articles.vue'], () => {
+        resolve(require('./views/articles.vue'));
+      });
+    }
+  },
+  {
+    path: '/article/:id',
+    name: 'article',
+    component(resolve) {
+      require.ensure(['./views/article.vue'], () => {
+        resolve(require('./views/article.vue'));
       });
     }
   },
