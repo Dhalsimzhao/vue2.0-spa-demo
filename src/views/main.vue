@@ -34,3 +34,20 @@ export default {
   }
 }
 </script>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+</style>
