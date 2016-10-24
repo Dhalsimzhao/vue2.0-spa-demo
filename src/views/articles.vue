@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <div class="filter-box">
-      <div></div>
+  <div class="articles">
+    <div class="articles-header">
+      <div class="filter-box">
+        <div>filter-box</div>
+      </div>
     </div>
     <div class="articles-box">
       <ul>
@@ -34,7 +36,8 @@
     <div class="pagination">
       <ul>
         <li v-for="page in pages"
-          class="page">
+          class="page"
+          :class="{'active': searchParams.page === page}">
           <router-link :to="{name: 'articles', query: {page: page}}">
             {{ page }}
           </router-link>
@@ -67,6 +70,11 @@ export default {
     }
   },
 
+  computed() {
+    return {
+    }
+  },
+
   mounted() {
     this.getArticles();
   },
@@ -83,7 +91,11 @@ export default {
 
   watch: {
     '$route' (to, from) {
-      
+      console.log(arguments)
+      if (to.query && to.query.page) {
+        this.searchParams.page = to.query.page;
+        this.getArticles();
+      }
     }
   },
   // watch: {
@@ -107,6 +119,13 @@ ul {
   margin: 0;
   padding: 0;
 }
+.articles {
+  position: relative;
+}
+.articles-header {
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+}
 .article-box {
   list-style: none;
   padding: 10px;
@@ -119,6 +138,7 @@ ul {
   margin: 0;
   font-size: 16px;
   color: #333;
+  margin-bottom: 10px;
 }
 .article-box .content {
 
@@ -144,6 +164,7 @@ ul {
 .pagination{
   overflow: hidden;
   padding: 10px;
+  height: 60px;
 }
 .page{
   float: left;
@@ -157,5 +178,12 @@ ul {
 }
 .page.active {
   color: #80bd01;
+}
+.page > a {
+  display: block;
+}
+.page.active > a {
+  color: #80bd01;
+  cursor: default;
 }
 </style>
