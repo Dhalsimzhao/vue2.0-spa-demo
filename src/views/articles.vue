@@ -2,7 +2,7 @@
   <div class="articles">
     <div class="articles-header">
       <div class="filter-box">
-        <div>filter-box</div>
+        <tab></tab>
       </div>
     </div>
     <div class="articles-box">
@@ -49,6 +49,7 @@
 
 <script type="text/javascript">
 import $ from 'jquery';
+import tab from '../components/tab'
 
 export default {
   filters: {
@@ -98,19 +99,9 @@ export default {
       }
     }
   },
-  // watch: {
-  //     // 切换页面
-  //     '$route' (to, from) {
-  //         // 如果是当前页面切换分类的情况
-  //         if (to.query && to.query.tab) {
-  //             this.searchKey.tab = to.query.tab;
-  //         }
-  //         this.searchKey.limit = 20;
-  //         this.getTopics();
-  //         // 隐藏导航栏
-  //         this.$refs.head.show = false;
-  //     }
-  // },
+  components: {
+    tab
+  }
 }
 </script>
 
