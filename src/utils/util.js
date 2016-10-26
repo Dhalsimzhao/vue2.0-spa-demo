@@ -12,8 +12,13 @@ const dateUtil = {
   }
 }
 
-const stringUtil = {}
-const mathUtil = {}
+const stringUtil = {
+
+}
+
+const mathUtil = {
+
+}
 
 export default {
   dateUtil
