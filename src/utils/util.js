@@ -12,6 +12,9 @@ const dateUtil = {
   }
 }
 
+const stringUtil = {}
+const mathUtil = {}
+
 export default {
   dateUtil
 }
