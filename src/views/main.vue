@@ -26,17 +26,17 @@
 <script type="text/javascript">
 export default {
   mounted() {
-    setTimeout(() => {
-      this.$router.push({
-        name: 'articles'
-      });
-    }, 2000);
+    // setTimeout(() => {
+    //   this.$router.push({
+    //     name: 'articles'
+    //   });
+    // }, 2000);
   }
 }
 </script>
 
 <style>
-html, body {
+html, body, ul, p {
   margin: 0;
   padding: 0;
 }

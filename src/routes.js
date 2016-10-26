@@ -1,10 +1,10 @@
 const routes = [
   {
     path: '/',
-    name: 'main',
+    name: 'articles',
     component(resolve) {
-      require.ensure(['./views/main.vue'], () => {
-        resolve(require('./views/main.vue'));
+      require.ensure(['./views/articles.vue'], () => {
+        resolve(require('./views/articles.vue'));
       });
     }
   },
