@@ -16,14 +16,29 @@
     display: block;
     overflow: hidden;
   }
+  .topiclist-tab {
+     background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+
+    margin: 0 10px 10px 0;
+  }
+     
   .article-box .article-title {
+    font-weight: bold;
     margin: 0;
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
   }
   .article-box .main {
-    float: left
+    float: left;
+    width: calc(100% - 100px);
   }
   .article-box .content {
     
@@ -94,7 +109,8 @@
         <li v-for="article in articles" class="article-box">
           <router-link :to="{name: 'article', params: {id: article.id}}">
             <div class="main">
-              <h3 v-text="article.title" class="article-title"></h3>
+              <span class="topiclist-tab">{{article.tab}}</span>
+              <span v-text="article.title" class="article-title"></span>
               <div class="content">
                 <img class="avatar" :src="article.author.avatar_url" />
                 <div class="info">
@@ -140,7 +156,6 @@
   export default {
     filters: {
       formatTime(time) {
-        debugger;
         return dateUtil.timeAgo(time);
         // return time.replace(/^([^T]*).*/, '$1');
       }
@@ -176,10 +191,6 @@
         $.getJSON(url, this.searchParams, json => {
           this.articles = json.data;
         })
-      },
-
-      timeAgo(time) {
-        
       }
     },
 
@@ -188,8 +199,12 @@
         console.log(arguments)
         if (to.query && to.query.page) {
           this.searchParams.page = to.query.page;
-          this.getArticles();
         }
+        if (to.query && to.query.tab) {
+          this.searchParams.tab = to.query.tab;
+        }
+
+        this.getArticles();
       }
     },
     components: {

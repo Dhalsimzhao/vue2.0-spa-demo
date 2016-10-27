@@ -4,7 +4,6 @@ const dateUtil = {
   timeAgo(time) {
     var str = '';
     if (time) {
-      debugger;
       let timeagoInstance = new Timeago();
       str = timeagoInstance.format(time, 'zh_CN');
     }
