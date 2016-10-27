@@ -16,8 +16,17 @@
     display: block;
     overflow: hidden;
   }
+  .article-box .top-content {
+    margin-bottom: 10px;
+  }
+  .article-box .top-content > span{
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+  }
+
   .topiclist-tab {
-     background: #80bd01;
+    background: #80bd01;
     padding: 2px 4px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -25,16 +34,35 @@
     -o-border-radius: 3px;
     color: #fff;
     font-size: 12px;
-
-    margin: 0 10px 10px 0;
+    margin-right: 10px;
+    line-height: 14px;
   }
-     
+  .topiclist-tab.top {
+    background: #E74C3C;
+  }
+  .topiclist-tab.good {
+    background: #E67E22;
+  }
+  .topiclist-tab.share {
+    background: #1ABC9C;
+  }
+  .topiclist-tab.ask {
+    background: #3498DB;
+  }
+  .topiclist-tab.job {
+    background: #9B59B6;
+  }
+
   .article-box .article-title {
     font-weight: bold;
     margin: 0;
     font-size: 16px;
     color: #333;
-    margin-bottom: 10px;
+    white-space: nowrap;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 50px);
   }
   .article-box .main {
     float: left;
@@ -48,6 +76,7 @@
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    border-radius: 50%;
   }
   .article-box .content .info {
     color: #aaa;
@@ -109,8 +138,12 @@
         <li v-for="article in articles" class="article-box">
           <router-link :to="{name: 'article', params: {id: article.id}}">
             <div class="main">
-              <span class="topiclist-tab">{{article.tab}}</span>
-              <span v-text="article.title" class="article-title"></span>
+              <div class="top-content">
+                <span class="topiclist-tab" 
+                :class="formatTab('class', article.tab, article.top, article.good)">
+                {{ formatTab('text', article.tab, article.top, article.good) }}</span>
+                <span v-text="article.title" class="article-title"></span>  
+              </div>
               <div class="content">
                 <img class="avatar" :src="article.author.avatar_url" />
                 <div class="info">
@@ -191,6 +224,25 @@
         $.getJSON(url, this.searchParams, json => {
           this.articles = json.data;
         })
+      },
+
+      formatTab(type, tab, isTop, isGood) {
+        var tabName, className;
+        if (isTop) {
+          tabName = '置顶';
+          className = 'top';
+        } else if (isGood) {
+          tabName = '精华';
+          className = 'good';
+        } else {
+          switch(tab){
+            case 'good': tabName = '精华'; className = tab; break;
+            case 'share': tabName = '分享'; className = tab; break;
+            case 'ask': tabName = '问答'; className = tab; break;
+            case 'job': tabName = '招聘'; className = tab; break;
+          }
+        }
+        return type === 'text' ? tabName : className;
       }
     },
 
