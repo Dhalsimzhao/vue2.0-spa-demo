@@ -9,7 +9,9 @@
     </div>
     <div class="replies-list">
       <ul>
-        <li v-for="reply in replies"></li>
+        <li v-for="reply in replies">
+          <div v-html="reply.content"></div>
+        </li>
       </ul>
     </div>
   </div>
