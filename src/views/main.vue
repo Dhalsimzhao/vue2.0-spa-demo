@@ -39,7 +39,9 @@ export default {
 html, body, ul, p {
   margin: 0;
   padding: 0;
+  font-size: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti,sans-serif !important;
 }
+
 * {
   box-sizing: border-box;
 }

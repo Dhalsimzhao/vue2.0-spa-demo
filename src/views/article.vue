@@ -1,7 +1,7 @@
 <template>
   <div class="article">
     <div class="article-header"></div>
-    <!-- <div class="article-content" v-html="article.content"></div> -->
+    <div class="article-content" v-html="article.content"></div>
     <reply :count="article.reply_count"
            :replies="article.replies"></reply>
   </div>
