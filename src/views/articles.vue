@@ -178,14 +178,18 @@
         </li>
       </ul>
     </div>
+    <totop></totop>
   </div>
 </template>
 
 <script type="text/javascript">
   import $ from 'jquery';
-  import util from '../utils/util.js'
+  import util from '../utils/util'
   import tab from '../components/tab'
+  import totop from '../components/backtotop.vue'
+
   var dateUtil = util.dateUtil
+
   export default {
     filters: {
       formatTime(time) {
@@ -260,7 +264,8 @@
       }
     },
     components: {
-      tab
+      tab,
+      totop
     }
   }
 </script>

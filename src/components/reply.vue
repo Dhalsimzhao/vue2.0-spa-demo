@@ -66,9 +66,9 @@
 </template>
 
 <script>
-// import {dateUtil} from '../utils/util'
+  // import { dateUtil } from '../utils/util'
 
-  import util from '../utils/util.js'
+  import util from '../utils/util'
   const dateUtil = util.dateUtil
 
   export default {

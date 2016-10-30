@@ -20,5 +20,7 @@ const mathUtil = {
 }
 
 export default {
-  dateUtil
+  dateUtil,
+  stringUtil,
+  mathUtil
 }
