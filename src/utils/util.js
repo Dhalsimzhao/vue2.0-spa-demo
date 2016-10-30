@@ -19,8 +19,28 @@ const mathUtil = {
 
 }
 
+const fnUtil = {
+  debounce(fn, wait){
+    var timer;
+    var start = Date.now();
+    var laterExec = function(context, args) {
+      timer = void 0;
+      return fn.apply(context, args);
+    }
+    return function () {
+      var self = this;
+      if (!timer) {
+        timer = setTimeout(function(){
+          laterExec(self, arguments);
+        }, wait);
+      }
+    }
+  }
+}
+
 export default {
   dateUtil,
   stringUtil,
-  mathUtil
+  mathUtil,
+  fnUtil
 }

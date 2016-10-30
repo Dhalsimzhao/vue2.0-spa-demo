@@ -178,7 +178,7 @@
         </li>
       </ul>
     </div>
-    <totop></totop>
+    <totop v-show="showToTop"></totop>
   </div>
 </template>
 
@@ -188,7 +188,8 @@
   import tab from '../components/tab'
   import totop from '../components/backtotop.vue'
 
-  var dateUtil = util.dateUtil
+  const dateUtil = util.dateUtil
+  const fnUtil = util.fnUtil
 
   export default {
     filters: {
@@ -207,7 +208,8 @@
           limit: 20,
           tab: 'all',
           mdrender: true
-        }
+        },
+        showToTop: false
       }
     },
 
@@ -247,6 +249,26 @@
           }
         }
         return type === 'text' ? tabName : className;
+      },
+
+      bindEvents() {
+        $('body').scroll(fnUtil.debounce(this.onScroll, 200));
+      },
+
+      unbindEvents() {
+        $('body').off('scroll');
+      },
+
+      onScroll() {
+        if ($('body').scrollTop() > 100) {
+          this.showToTop = true;
+        } else {
+          this.showToTop = false;
+        }
+      },
+
+      beforeDestory() {
+        this.unbindEvents();
       }
     },
 
