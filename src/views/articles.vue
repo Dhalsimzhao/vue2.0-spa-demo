@@ -1,4 +1,11 @@
 <style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+  
   .articles {
     position: relative;
   }
@@ -178,7 +185,9 @@
         </li>
       </ul>
     </div>
-    <totop v-show="showToTop"></totop>
+    <transition name="fade">
+      <totop v-if="showToTop"></totop>
+    </transition>
   </div>
 </template>
 
@@ -219,6 +228,7 @@
     },
 
     mounted() {
+      this.bindEvents();
       this.getArticles();
     },
 
@@ -252,7 +262,7 @@
       },
 
       bindEvents() {
-        $('body').scroll(fnUtil.debounce(this.onScroll, 200));
+        $(window).scroll(fnUtil.debounce(this.onScroll, 200));
       },
 
       unbindEvents() {
@@ -260,6 +270,7 @@
       },
 
       onScroll() {
+        console.log('on scroll')
         if ($('body').scrollTop() > 100) {
           this.showToTop = true;
         } else {
