@@ -3,8 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-var
-const store = new Vuex.store({
+const store = new Vuex.Store({
   state: {
     userInfo: {}
   },

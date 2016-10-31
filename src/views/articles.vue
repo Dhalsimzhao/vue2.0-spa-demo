@@ -270,7 +270,7 @@
       },
 
       onScroll() {
-        console.log('on scroll')
+        // console.log('on scroll')
         if ($('body').scrollTop() > 100) {
           this.showToTop = true;
         } else {

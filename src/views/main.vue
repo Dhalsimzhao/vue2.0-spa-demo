@@ -24,6 +24,8 @@
 </template>
 
 <script type="text/javascript">
+// import store from '../store/index.js'
+
 export default {
   mounted() {
     // setTimeout(() => {

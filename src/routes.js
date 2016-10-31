@@ -6,8 +6,19 @@ const routes = [
       require.ensure(['./views/articles.vue'], () => {
         resolve(require('./views/articles.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
+  {
+    path: '/login',
+    name: 'login',
+    component(resolve) {
+      require.ensure(['./views/login.vue'], () => {
+        resolve(require('./views/login.vue'));
+      });
+    },
+    meta: { requiresAuth: false }
+  },,
   {
     path: '/datas',
     name: 'datas',
@@ -15,7 +26,8 @@ const routes = [
       require.ensure(['./views/datas.vue'], () => {
         resolve(require('./views/datas.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
   {
     path: '/charts',
@@ -24,7 +36,8 @@ const routes = [
       require.ensure(['./views/charts.vue'], () => {
         resolve(require('./views/charts.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
   {
     path: '/data/:id',
@@ -33,7 +46,8 @@ const routes = [
       require.ensure(['./views/data.vue'], () => {
         resolve(require('./views/data.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
   {
     path: '/articles',
@@ -42,7 +56,8 @@ const routes = [
       require.ensure(['./views/articles.vue'], () => {
         resolve(require('./views/articles.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
   {
     path: '/article/:id',
@@ -51,7 +66,8 @@ const routes = [
       require.ensure(['./views/article.vue'], () => {
         resolve(require('./views/article.vue'));
       });
-    }
+    },
+    meta: { requiresAuth: true }
   },
 ]
 

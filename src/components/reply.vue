@@ -74,7 +74,7 @@
   export default {
     props: {
       count: Number,
-      replies: []
+      replies: Array
     },
 
     filters: {
