@@ -43,7 +43,6 @@
                     },
                     dataType: 'json',
                     success: (res) => {
-                        debugger;
                         let user = {
                             loginname: res.loginname,
                             avatar_url: res.avatar_url,
