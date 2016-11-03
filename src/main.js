@@ -20,9 +20,14 @@ const router = new VueRouter({
   saveScrollPosition: true
 })
 
+if (sessionStorage && sessionStorage.user) {
+  store.dispatch('setUserInfo', JSON.parse(sessionStorage.user));
+}
+
 router.beforeEach((to, from, next) => {
   console.log(store)
   if (to.matched.some(record => record.meta.requiresAuth)) {
+    console.log(store.state.userInfo.userId);
     if (store.state.userInfo.userId) {
       next()
     } else {
